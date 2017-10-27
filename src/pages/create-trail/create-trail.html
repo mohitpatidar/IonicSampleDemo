@@ -1,0 +1,503 @@
+<!--
+  Generated template for the TrailDetailPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar class="setup-Navbar" hideBackButton="true">
+    <ion-buttons (click)="gotoSearch()" left style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/search.png">
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Create Trail
+    </ion-title>
+    <ion-buttons right style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/bell.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color:#ecf0f1" padding-top padding-bottom padding-left>
+
+  <p style="font-size: 22px; margin-left: 12px;margin-bottom: 22px;margin-top: 12px;">Create Trail</p>
+  <ion-card style="margin: 0">
+    <ion-card-content>
+
+      <div class="trail-detail-div">
+        <p class="trail-detail-div-title">Title of the Trail</p>
+        <ion-input class="trail-detail-item-divider" type="text"></ion-input>
+      </div>
+
+      <div class="trail-detail-div">
+        <p class="trail-detail-div-title">Destination</p>
+        <ion-input class="trail-detail-item-divider" type="text"></ion-input>
+      </div>
+
+      <div class="trail-detail-div">
+        <p class="trail-detail-div-title">Source</p>
+        <ion-input class="trail-detail-item-divider" type="text"></ion-input>
+      </div>
+
+      <div class="trail-detail-div">
+        <p class="trail-detail-div-title">No of days for the Trail</p>
+        <ion-input class="trail-detail-item-divider" type="text"></ion-input>
+      </div>
+
+      <div class="trail-detail-div">
+        <p class="trail-detail-div-title">Journey start date</p>
+        <ion-input class="trail-detail-item-divider" type="text"></ion-input>
+      </div>
+
+      <div class="trail-detail-div-title trail-detail-div">Description of trail</div>
+      <textarea class="trail-detail-textarea"></textarea>
+
+      <!--<div style="color: cornflowerblue;font-size: 12px;">+ Show criteria</div>-->
+
+      <ion-row style="margin-top: 15px">
+        <ion-col style="padding: 0px;margin-top: 2px;" col-4><img style="width: 10px;float: right" src="assets/images/createtrail/left_arrow.png"></ion-col>
+        <ion-col style="padding: 0px;font-size: 14px" col-4 text-center >Day 1</ion-col>
+        <ion-col style="padding: 0px;margin-top: 2px;" col-4><img style="width: 10px" src="assets/images/createtrail/right_arrow.png"></ion-col>
+      </ion-row>
+
+      <ion-slides style="margin-top: 3%">
+        <ion-slide style="padding-right: 2px;">
+
+          <ion-item style="padding-left: 0px">
+            <ion-input class="trail-detail-item-divider" type="text"
+                       placeholder="9 am: Search the Landmark"></ion-input>
+            <div item-right class="trail-detail-item-divider" style="padding-left: 0px">
+              <img style="padding: 12px" src="assets/images/traildetail/cycle.png">
+            </div>
+          </ion-item>
+
+
+          <ion-item style="padding-left: 0px">
+            <ion-input class="trail-detail-item-divider" type="text"
+                       placeholder="11 am: Search the Landmark"></ion-input>
+            <div item-right class="trail-detail-item-divider" style="padding-left: 0px">
+              <img style="padding: 12px" src="assets/images/traildetail/car.png">
+            </div>
+          </ion-item>
+
+          <ion-item style="padding-left: 0px">
+            <ion-input class="trail-detail-item-divider" type="text"
+                       placeholder="1 pm: Search the Landmark"></ion-input>
+            <div item-right class="trail-detail-item-divider" style="padding-left: 0px">
+              <img style="padding: 12px" src="assets/images/traildetail/car.png">
+            </div>
+          </ion-item>
+
+          <ion-item style="padding-left: 0px">
+            <ion-input class="trail-detail-item-divider" type="text"
+                       placeholder="3 pm: Search the Landmark"></ion-input>
+            <div item-right class="trail-detail-item-divider" style="padding-left: 0px">
+              <img style="padding: 12px" src="assets/images/traildetail/cycle.png">
+            </div>
+          </ion-item>
+
+
+          <ion-item style="padding-left: 0px">
+            <ion-input class="trail-detail-item-divider" type="text"
+                       placeholder="5 pm: Search the Landmark"></ion-input>
+            <div item-right class="trail-detail-item-divider" style="padding-left: 0px">
+              <img style="padding: 12px" src="assets/images/traildetail/scooter.png">
+            </div>
+          </ion-item>
+
+
+          <ion-item style="padding-left: 0px">
+            <ion-input class="trail-detail-item-divider" type="text"
+                       placeholder="7 pm: Search the Landmark"></ion-input>
+            <div item-right class="trail-detail-item-divider" style="padding-left: 0px">
+              <img style="padding: 12px" src="assets/images/traildetail/car.png">
+            </div>
+          </ion-item>
+
+
+          <img class="trail-detail-image" src="assets/images/newsfeed/img2.png">
+
+          <ion-input class="trail-detail-item-divider" style="margin-top: 15px" type="text"
+                     placeholder="Link1:"></ion-input>
+          <ion-input class="trail-detail-item-divider" style="margin-top: 15px" type="text"
+                     placeholder="Link2:"></ion-input>
+          <ion-input class="trail-detail-item-divider" style="margin-top: 15px" type="text"
+                     placeholder="Link3:"></ion-input>
+          <ion-input class="trail-detail-item-divider" style="margin-top: 15px" type="text"
+                     placeholder="Link4:"></ion-input>
+
+
+          <div style="height: 1px;width: 100%;background-color:#ECEFF4"></div>
+          <ion-list>
+            <ion-item style="padding-left: 0px; margin-top: 15px">
+              <ion-row>
+                <ion-col col-4 class="trail-detail-column">
+                  Make it:
+                </ion-col>
+                <ion-col col-8>
+                  <ion-row>
+                    <input type="radio" name="Budget">
+                    <div class="radio-txt">Private</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Budget">
+                    <div class="radio-txt">Public not searchable</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Budget">
+                    <div class="radio-txt">Public and searchable</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Budget">
+                    <div class="radio-txt">Friends</div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 1.5px;width: 100%;background-color:#ECEFF4"></div>
+
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-4 class="trail-detail-column">
+                  This is a:
+                </ion-col>
+                <ion-col col-8>
+                  <ion-row>
+                    <input type="radio" name="this_is_a">
+                    <div class="radio-txt">Temperory trail</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="this_is_a">
+                    <div class="radio-txt">Permanent trail</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <div style="font-size: 10px;">Will be visible for <input style="width: 25%;"
+                                                                             class="trail-detail-item-divider"
+                                                                             type="text" name="Budget"> days
+                    </div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 2px;width: 100%;background-color:#ECEFF4"></div>
+
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-4 class="trail-detail-column">
+                  Comments:
+                </ion-col>
+                <ion-col col-8>
+                  <ion-row>
+                    <input type="radio" name="Comments">
+                    <div class="radio-txt">Request comments</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Comments">
+                    <div class="radio-txt">Turn off comments</div>
+                  </ion-row>
+
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 1.5px;width: 100%;background-color:#ECEFF4"></div>
+
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-4 class="trail-detail-column">
+                  Copy it:
+                </ion-col>
+                <ion-col col-8>
+                  <ion-row>
+                    <input type="radio" name="Comments">
+                    <div class="radio-txt">Allow user to copy</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Comments">
+                    <div class="radio-txt">Don't allow user to copy</div>
+                  </ion-row>
+
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 1.5px;width: 100%;background-color:#ECEFF4"></div>
+
+          </ion-list>
+
+
+          <ion-row style="margin-top: 15px;">
+            <ion-col col-2 style="padding: 0;">
+              <div style="font-size: 12px;margin-top: 10px">Import</div>
+            </ion-col>
+            <ion-col col-10 style="padding: 0;">
+              <ion-item class="trail-detail-import-item">
+                <img src="assets/images/traildetail/facebook.png" item-left>
+                <div style="margin-left: 5px" text-wrap>Import from Facebook</div>
+              </ion-item>
+              <ion-item style="margin-top: 5px" class="trail-detail-import-item">
+                <img src="assets/images/traildetail/insta.png" item-left>
+                <div style="margin-left: 5px" text-wrap>Import from Instagram</div>
+              </ion-item>
+            </ion-col>
+            <!--<ion-col col-5 style="padding: 0;">
+              <ion-item class="trail-detail-import-item">
+                <img src="assets/images/traildetail/insta.png" item-left>
+                <div style="margin-left: 5px" text-wrap>Import from Instagram</div>
+              </ion-item>
+            </ion-col>-->
+          </ion-row>
+
+
+          <ion-slides style="background-color:#ecf0f1;margin-top: 7%">
+            <ion-slide class="trail-slide">
+              <img class="trail-detail-images" src="assets/images/newsfeed/img1.png">
+            </ion-slide>
+
+            <ion-slide class="trail-slide">
+              <img class="trail-detail-images" src="assets/images/newsfeed/img1.png">
+            </ion-slide>
+
+            <ion-slide class="trail-slide">
+              <img class="trail-detail-images" src="assets/images/newsfeed/img1.png">
+            </ion-slide>
+          </ion-slides>
+
+
+          <ion-item style="font-size: 14px">
+            <div item-left>Set Criteria:</div>
+            <button style="margin-left: 10px;" ion-button>SET CRITERIA</button>
+          </ion-item>
+
+          <div style="margin-top:15px;height: 1.5px;width: 100%;background-color:#ECEFF4"></div>
+
+          <ion-row style="margin-top: 25px">
+
+            <ion-col col-3 style="padding: 0px">
+              <button style="background-color: #2e84e8;" class="trail-detail-btn" ion-button>Save</button>
+            </ion-col>
+
+            <ion-col col-3 style="padding: 0px">
+              <button style="background-color: #2ecc71;" class="trail-detail-btn" ion-button>Submit</button>
+            </ion-col>
+
+            <ion-col col-6 style="padding: 0px;">
+
+              <button style="background-color: #507cc0;float: left;margin-left: 5px;" class="trail-detail-fbbutton"
+                      ion-button icon-left>
+                <img style="width: 10%;margin-right: 5px;margin-left: 15px;height: 50%"
+                     src="assets/images/createtrail/facebook_icon.png" align="center">
+                <div style="margin-right: 5px;margin-top: 3px;">Share to Facebook</div>
+              </button>
+
+            </ion-col>
+
+          </ion-row>
+
+        </ion-slide>
+      </ion-slides>
+
+    </ion-card-content>
+  </ion-card>
+
+
+</ion-content>
+
+
+
+<!--
+<ion-header>
+
+  <ion-navbar class="setup-Navbar">
+    <ion-buttons (click)="gotoSearch()" left style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/search.png">
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Create Trail
+    </ion-title>
+    <ion-buttons right style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/bell.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color:#ecf0f1" padding-top padding-bottom padding-left>
+  <p style="color:#4a4a4a;font-size: 25px; margin-left: 25px;margin-bottom: 12px">Create Trails</p>
+
+  <ion-row style=" padding-top: 10px;padding-bottom: 10px;">
+    <ion-card style="margin: 0;border-radius: 5px;">
+      <ion-card-content style="padding: 25px">
+
+        <div style="margin: 10px 10px 5px 0px;color: #4a4a4a">Description of trail</div>
+        <textarea class="create-trail-textarea"></textarea>
+
+
+          <ion-row style="margin-top: 15px">
+            <ion-col col-5><img style="width: 8px;float: right"  src="assets/images/createtrail/left_arrow.png"></ion-col>
+            <ion-col col-2 text-center style="font-size: 14px;padding: 0;padding-top: 2px;">Day 1</ion-col>
+            <ion-col col-5><img style="width: 8px" src="assets/images/createtrail/right_arrow.png"></ion-col>
+          </ion-row>
+
+
+        <ion-slides>
+          <ion-slide style="padding-right: 2px;">
+            <ion-input class="create-trail-item-divider" type="text" placeholder="9 am: landmarks"></ion-input>
+
+            <ion-row class="create-trail-item-divider">
+              <ion-col col-10 style="padding: 0px"><ion-input  placeholder="11 am: Search landmark 02"></ion-input></ion-col>
+              <ion-col col-2 text-center><img style="margin: 5px 10px 5px 20px;" src="assets/images/createtrail/delete.png"></ion-col>
+            </ion-row>
+
+            <ion-input class="create-trail-item-divider" type="text" placeholder="1 pm: Search landmark 03"></ion-input>
+
+            <ion-input class="create-trail-item-divider" type="text" placeholder="3 pm: Search landmark 04"></ion-input>
+
+            <ion-input class="create-trail-item-divider" type="text" placeholder="5 pm: Search landmark 05"></ion-input>
+
+            <ion-input class="create-trail-item-divider" type="text" placeholder="7 pm: Search dinner cafe"></ion-input>
+
+            <img class="create-trail-image" src="assets/images/newsfeed/img2.png">
+
+            <ion-input class="create-trail-item-divider" type="text" placeholder="Link"></ion-input>
+
+            <ion-input class="create-trail-item-divider" type="text" placeholder="Youtube:"></ion-input>
+
+            <ion-input class="create-trail-item-divider" type="text" placeholder="Instagram:"></ion-input>
+
+            <ion-input class="create-trail-item-divider" type="text" placeholder="Blog:"></ion-input>
+
+
+            <ion-item style="padding-left: 0px; margin-top: 15px">
+              <ion-row>
+                <ion-col col-4 class="create-trail-column">
+                  Make it:
+                </ion-col>
+                <ion-col col-8>
+                  <ion-row>
+                    <input type="radio" name="Budget" checked>
+                    <div class="radio-txt">Private</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Budget">
+                    <div class="radio-txt">Public not searchable</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Budget">
+                    <div class="radio-txt">Public and searchable</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Budget">
+                    <div class="radio-txt">Friends</div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 1.5px;width: 100%;background-color:#ECEFF4"></div>
+
+
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-4 class="create-trail-column">
+                  This is a:
+                </ion-col>
+                <ion-col col-8>
+                  <ion-row>
+                    <input type="radio" name="this_is_a" checked>
+                    <div class="radio-txt">Temperory trail</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input  type="radio" name="this_is_a">
+                    <div class="radio-txt">Permanent trail</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <div style="font-size: 10px;color: #4a4a4a;">Will be visible for <input style="width: 25%;text-align: center;" class="create-trail-item-divider" type="text" name="Budget"> days</div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 2px;width: 100%;background-color:#ECEFF4"></div>
+
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-4 class="create-trail-column">
+                  Comments:
+                </ion-col>
+                <ion-col col-8>
+                  <ion-row>
+                    <input type="radio" name="Comments" checked>
+                    <div class="radio-txt">Request comments</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Comments">
+                    <div class="radio-txt">Turn off comments</div>
+                  </ion-row>
+
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 1.5px;width: 100%;background-color:#ECEFF4"></div>
+
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-4 class="create-trail-column">
+                  Copy it:
+                </ion-col>
+                <ion-col col-8>
+                  <ion-row>
+                    <input type="radio" name="Comments" checked>
+                    <div class="radio-txt">Allow user to copy</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Comments">
+                    <div class="radio-txt">Don't allow user to copy</div>
+                  </ion-row>
+
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 1.5px;width: 100%;background-color:#ECEFF4"></div>
+
+
+          </ion-slide>
+        </ion-slides>
+
+        <ion-row style="margin-top: 5px">
+
+          <ion-col col-6>
+            <button style="background-color: #507cc0" class="create-trail-button" ion-button icon-left>
+              <img style="width: 10%;margin-right: 5px;margin-left: 15px;height: 50%" src="assets/images/createtrail/facebook_icon.png" align="center">
+              <div>Share to Facebook</div>
+            </button>
+            &lt;!&ndash;<img style="margin-top: 5%;height: 30px;" src="assets/images/createtrail/share_facebook.png">&ndash;&gt;
+            &lt;!&ndash;<div style="background-color: #507cc0" class="row">
+              &lt;!&ndash;<ion-icon name="wine" item-left large ></ion-icon>&ndash;&gt;
+              <ion-col col-2><img style="width: 8px;" item-left src="assets/images/createtrail/facebook_icon.png"></ion-col>
+              <ion-col col-10><h2 style="color: white;font-size: 10px;">Share with facebook</h2></ion-col>
+            </div>&ndash;&gt;
+          </ion-col>
+
+          <ion-col col-3>
+            <button class="create-trail-save" ion-button >Save</button>
+          </ion-col>
+
+          <ion-col col-3>
+            <button class="create-trail-submit" ion-button >Submit</button>
+          </ion-col>
+        </ion-row>
+
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
+</ion-content>
+-->

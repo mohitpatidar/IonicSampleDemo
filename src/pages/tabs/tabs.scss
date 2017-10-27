@@ -1,0 +1,85 @@
+page-tabs{
+
+  .tabbar, .tabs-ios, .tabs-md {
+    .tab-button-icon {
+      background-repeat:no-repeat;
+      background-position:center;
+      height:40px;
+      width:40px;
+      &:before {
+        display:none;
+      }
+    }
+  }
+
+  .tabs {
+    a[aria-selected=false]{
+      .tab-button-icon[ng-reflect-name=one], .tab-button-icon[aria-label=one] {
+        background-image: url('../assets/images/tabs/menu_off.png');
+        background-repeat: no-repeat;
+        background-size: 85% 85%;
+      }
+      .tab-button-icon[ng-reflect-name=two], .tab-button-icon[aria-label=two] {
+        background-image: url('../assets/images/tabs/circle_off.png');
+        background-repeat: no-repeat;
+        background-size: 85% 85%;
+      }
+      .tab-button-icon[ng-reflect-name=three], .tab-button-icon[aria-label=three] {
+        background-image: url('../assets/images/tabs/map_off.png');
+        background-repeat: no-repeat;
+        background-size: 85% 85%;
+      }
+      .tab-button-icon[ng-reflect-name=four], .tab-button-icon[aria-label=four] {
+        background-image: url('../assets/images/tabs/people_off.png');
+        background-repeat: no-repeat;
+        background-size: 85% 85%;
+      }
+
+    }
+
+    a[aria-selected=true] {
+
+      .tab-button-icon[ng-reflect-name=one], .tab-button-icon[aria-label=one] {
+        background-image: url('../assets/images/tabs/menu_on.png');
+        background-repeat: no-repeat;
+        background-size: 85% 85%;
+      }
+      .tab-button-icon[ng-reflect-name=two], .tab-button-icon[aria-label=two] {
+        background-image: url('../assets/images/tabs/circle_on.png');
+        background-repeat: no-repeat;
+        background-size: 85% 85%;
+      }
+      .tab-button-icon[ng-reflect-name=three], .tab-button-icon[aria-label=three] {
+        background-image: url('../assets/images/tabs/map_on.png');
+        background-repeat: no-repeat;
+        background-size: 85% 85%;
+      }
+      .tab-button-icon[ng-reflect-name=four], .tab-button-icon[aria-label=four] {
+        background-image: url('../assets/images/tabs/people_on.png');
+        background-repeat: no-repeat;
+        background-size: 85% 85%;
+      }
+
+    }
+  }
+
+
+  .tabs-ios .tabbar,.tabs-md .tabbar{
+    height: 60px;
+  }
+
+  .action-sheet-ios .action-sheet-container,.action-sheet-md .action-sheet-container{
+    margin-bottom: 20% !important;
+  }
+
+  .tabs-div{
+    height: 60px;
+    width: 25%;
+    right: 25%;
+    text-align: center;
+    background: transparent;
+    position: absolute;
+    z-index: 9999;
+    bottom: 0;
+  }
+}

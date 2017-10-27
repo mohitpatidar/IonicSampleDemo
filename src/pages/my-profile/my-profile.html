@@ -1,0 +1,154 @@
+<ion-header>
+
+  <ion-navbar class="setup-Navbar">
+    <ion-buttons (click)="gotoSearch()" left style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/search.png">
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      My Profile
+    </ion-title>
+    <ion-buttons class="row" right style="padding: 5px">
+      <button  ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/bell.png">
+      </button>
+      <button (click)="gotoSettings()" ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/settings/setting_icon.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color:#ecf0f1" padding-top padding-bottom padding-left>
+
+  <ion-row>
+    <button style="height: 100%;padding:10px 0px 10px 20px" ion-button icon-left clear >
+      <!--<img style="width: 70px" src="assets/images/friends/user1.png" align="center">-->
+      <img style="width: 75px;border-radius: 50%;" align="center" src="{{profileImage}}">
+      <ion-row>
+      <ion-row style="margin-top: 15px;width: 100%">
+
+      <div style="padding-left: 8px;color: #4a4a4a;font-size: 22px;text-transform: none;">{{name}}</div>
+      <!--<div style="padding-left: 8px;color: #4a4a4a;font-size: 22px;text-transform: none;">Tad Hall</div>-->
+      </ion-row>
+      <ion-row style="margin-top: 5px">
+        <ion-col col-6>
+          <button class="trails-btn" (click)="gotoTrails()" ion-button >View Trails</button>
+        </ion-col>
+
+        <ion-col col-6>
+          <button class="friends-btn" (click)="gotoFriends()" ion-button >View Friends</button>
+        </ion-col>
+
+      </ion-row>
+      </ion-row>
+    </button>
+  </ion-row>
+
+
+  <!--<form>-->
+  <ion-row class="my-profile-row">
+    <ion-card style="margin: 0;border-radius: 5px;">
+      <ion-card-content style="padding: 25px">
+
+        <div style="margin: 10px 10px 10px 0px;color: gray">Basic Info</div>
+        <div class="my-profile-line-div"></div>
+
+        <div class="my-profile-div">
+          <p class="my-profile-div-title">Name</p>
+          <ion-item>
+          <ion-input class="my-profile-item-divider" type="text" name="username" [(ngModel)]="userName" required></ion-input>
+          </ion-item>
+        </div>
+
+        <div class="my-profile-div">
+          <p class="my-profile-div-title">Age</p>
+          <ion-item>
+          <ion-input class="my-profile-item-divider" type="number" name="age" [(ngModel)]="age"></ion-input>
+          </ion-item>
+        </div>
+
+        <div class="my-profile-div">
+          <p class="my-profile-div-title">Email</p>
+          <ion-input class="my-profile-item-divider" type="text" name="email" [(ngModel)]="email" disabled></ion-input>
+        </div>
+
+        <div class="my-profile-div">
+          <p class="my-profile-div-title">Location</p>
+          <ion-item>
+          <ion-input class="my-profile-item-divider" type="text" name="Location" [(ngModel)]="Location"></ion-input>
+          </ion-item>
+        </div>
+
+        <div class="my-profile-div">
+          <p class="my-profile-div-title">Tags</p>
+          <ion-item>
+          <ion-input class="my-profile-item-divider" type="text" name="tags" [(ngModel)]="tags"></ion-input>
+          </ion-item>
+        </div>
+
+        <div class="my-profile-div">
+          <p class="my-profile-div-title">Website link</p>
+          <ion-item>
+          <ion-input class="my-profile-item-divider" type="text" name="website" [(ngModel)]="website"></ion-input>
+          </ion-item>
+        </div>
+
+        <div class="my-profile-div">
+          <p class="my-profile-div-title">Instagram</p>
+          <ion-item>
+          <ion-input class="my-profile-item-divider" type="text" name="instagram" [(ngModel)]="instagram"></ion-input>
+          </ion-item>
+        </div>
+
+        <div class="my-profile-div">
+          <p class="my-profile-div-title">Facebook</p>
+          <ion-item>
+          <ion-input class="my-profile-item-divider" type="text" name="facebook" [(ngModel)]="facebook"></ion-input>
+          </ion-item>
+        </div>
+
+        <div class="my-profile-div">
+          <p class="my-profile-div-title">Twitter</p>
+          <ion-item>
+          <ion-input class="my-profile-item-divider" type="text" name="twitter" [(ngModel)]="twitter"></ion-input>
+          </ion-item>
+        </div>
+
+
+        <div class="my-profile-div">
+          <p class="my-profile-div-title">Interests</p>
+
+          <ion-list *ngFor="let data of optionData">
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-4 class="my-profile-list-column">
+                  {{data.label}}
+                </ion-col>
+                <ion-col col-8 style="margin-top: -5px;padding: 0;">
+                  <ion-row style="margin-top: 10px" *ngFor="let options of data.options">
+                    <!--<input type="radio" name="{{data.label}}" value="{{options.option}}" (click)="optionSelection(options._id)" >-->
+
+                    <!--<input type="checkbox" id="{{data.label}}"/>-->
+                    <input type="checkbox" id="{{data.label}}" [checked]="options.isChecked" (change)="options.isChecked = !options.isChecked">
+                    <div class="radio-txt">{{options.option}}</div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 2px;width: 100%;background-color:#ECEFF4"></div>
+          </ion-list>
+
+          <button ion-button class="save-btn" (click)="updateUserAPI()">Save</button>
+        </div>
+
+
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
+  <!--</form>-->
+
+</ion-content>

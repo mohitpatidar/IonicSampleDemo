@@ -1,0 +1,133 @@
+<ion-header>
+
+  <ion-navbar class="setup-Navbar" hideBackButton="true">
+    <ion-buttons (click)="gotoSearch()" left style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/search.png">
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Add Places
+    </ion-title>
+    <ion-buttons right style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/bell.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color:#ecf0f1" padding-top padding-bottom padding-left>
+  <p style="color:gray;font-size: 25px; margin-left: 25px;margin-bottom: 12px">Place</p>
+
+  <ion-row style=" padding-top: 10px;padding-bottom: 10px;">
+    <ion-card style="margin: 0;border-radius: 5px;">
+      <ion-card-content style="padding: 25px">
+
+        <div class="add-place-div" style="padding-right: 0">
+          <p class="add-place-div-title">Title</p>
+          <ion-item no-padding>
+          <ion-input class="add-place-item-divider" type="text" [(ngModel)]="title" ></ion-input>
+          </ion-item>
+        </div>
+
+        <div class="add-place-div">
+          <p class="add-place-div-title">Destination</p>
+          <ion-searchbar  style="padding: 0" class="add-place-item-divider" [(ngModel)]="autocomplete.query" placeholder="Enter a location" [showCancelButton]="true" (ionInput)="updateSearch()" ></ion-searchbar>
+          <!--<ion-input class="add-place-item-divider" type="text" [(ngModel)]="destination" placeholder="Enter a location"  ></ion-input>-->
+          <ion-list>
+            <ion-item *ngFor="let item of autocompleteItems" tappable (click)="chooseItem(item)">
+              {{ item.description }}
+            </ion-item>
+          </ion-list>
+
+        </div>
+
+        <div style="margin: 20px 10px 10px 0px;color: gray">Description of place</div>
+        <textarea class="setup-textarea" [(ngModel)]="description" ></textarea>
+
+        <div style="margin: 15px 10px 10px 0px;color: gray">Detail and recommendations of what to do</div>
+        <textarea class="setup-textarea" [(ngModel)]="details"></textarea>
+
+        <div style="margin: 15px 10px 10px 0px;color: gray">Reviews from google</div>
+        <!--<textarea class="setup-textarea"></textarea>-->
+
+        <ion-card *ngFor="let review of reviewDataList">
+          <ion-card-content *ngIf="review.rating">
+            <button style="height: 100%;padding: 0px;" ion-button icon-left clear >
+              <img col-4 style="max-width: 25%;margin-left: -10%;border-radius: 50%;" src="{{review.profile_photo_url}}" align="center">
+              <div col-8>
+              <div class="row" style="overflow: hidden;padding-left: 5px;color: #007aff;text-transform: none;">{{review.author_name}}</div>
+              <div class="row" style="padding-left: 5px;color: gray;text-transform: none;text-align: left;margin-top: 5px;">{{review.rating}} out of 5</div>
+              </div>
+            </button>
+            <ion-item text-wrap style="margin-top: 10%">{{review.text}}</ion-item>
+            <!--<ion-item>{{review.author_name}}</ion-item>-->
+          </ion-card-content>
+        </ion-card>
+
+        <div class="add-place-image" id="map"></div>
+        <!--<img class="add-place-image" src="assets/images/newsfeed/img2.png">-->
+
+        <div class="row add-place-input"  >
+          <ion-item no-lines style="padding: 0%">
+            <div item-left>link 1: </div>
+            <ion-item>
+            <ion-input no-lines class="add-place-input-inside" item-right  [(ngModel)]="link1" type="text"></ion-input>
+            </ion-item>
+          </ion-item>
+        </div>
+
+        <div class="row add-place-input"  >
+          <ion-item no-lines style="padding: 0%">
+            <div item-left>link 2: </div>
+            <ion-item>
+            <ion-input no-lines class="add-place-input-inside" item-right  [(ngModel)]="link2" type="text"></ion-input>
+            </ion-item>
+          </ion-item>
+        </div>
+
+        <div class="row add-place-input"  >
+          <ion-item no-lines style="padding: 0%">
+            <div item-left>link 3: </div>
+            <ion-item>
+            <ion-input no-lines class="add-place-input-inside" item-right  [(ngModel)]="link3" type="text" ></ion-input>
+            </ion-item>
+          </ion-item>
+        </div>
+
+        <div class="row add-place-input"  >
+          <ion-item no-lines style="padding: 0%">
+            <div item-left>link 4: </div>
+            <ion-item>
+            <ion-input no-lines class="add-place-input-inside" item-right  [(ngModel)]="link4" type="text" ></ion-input>
+            </ion-item>
+          </ion-item>
+        </div>
+
+        <div class="add-place-line"></div>
+
+        <ion-row style="margin-top: 5px">
+
+          <ion-col *ngIf="!editPlace" col-5 style="padding: 0px">
+            <button  style="background: url('assets/images/facebook_button.png');background-repeat: no-repeat;background-position: center;background-size: 100% 100%;" class="add-place-fb-button" ion-button icon-left>
+              <!--<img style="width: 10%;margin-right: 5px;margin-left: 15px;height: 50%" src="assets/images/createtrail/facebook_icon.png" align="center">
+              <div>Share to Facebook</div>-->
+            </button>
+          </ion-col>
+
+          <ion-col col-3 style="padding: 0px">
+            <button class="add-place-btn" ion-button (click)="Save()">Save</button>
+          </ion-col>
+
+          <ion-col *ngIf="!editPlace" col-4 style="padding: 0px">
+            <button class="add-place-btn" ion-button >Add to Trails</button>
+          </ion-col>
+        </ion-row>
+
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
+</ion-content>

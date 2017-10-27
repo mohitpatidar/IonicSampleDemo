@@ -1,0 +1,98 @@
+<ion-header>
+
+  <ion-navbar class="setup-Navbar">
+    <ion-buttons (click)="gotoSearch()" left style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/search.png">
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Uploaded Trails
+    </ion-title>
+    <ion-buttons right style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/bell.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color:#ecf0f1" padding>
+
+  <p style="font-size: 20px;margin: 10px 0 10px 25px;color: gray">Uploaded Trails</p>
+
+
+  <div style="margin-left: 18px">
+
+    <ion-row class="uploaded-trails-all-row">
+      <ion-card style="margin: 0;border-radius: 5px;">
+        <ion-card-content style="padding: 0">
+          <ion-row>
+
+            <img class="uploaded-trails-card-image" src="assets/images/newsfeed/img3.png">
+
+            <div style="padding: 5px 20px 0px 20px;width: 100%">
+              <div style="font-size: 12px;color: #4a4a4a;font-weight:bold;margin-top: 5px;font-size: 12px">Bike trail arround the cities
+                landmarks
+              </div>
+              <div style="font-size: 9px;color: darkgray;font-size: 10px;margin-top: 5px;">See the best attraction of
+                the city in the best way possible
+              </div>
+            </div>
+
+            <ion-row col-12 style="padding-left: 5px">
+
+              <ion-col col-4>
+                <button class="edit-btn" ion-button >
+                  Edit
+                </button>
+              </ion-col>
+
+              <ion-col col-4 >
+                <button class="delete-btn"  ion-button >Delete</button>
+              </ion-col>
+
+            </ion-row>
+
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+
+    <ion-row class="uploaded-trails-all-row">
+      <ion-card style="margin: 0;border-radius: 5px;">
+        <ion-card-content style="padding: 0">
+          <ion-row>
+
+            <img class="uploaded-trails-card-image" src="assets/images/newsfeed/img2.png">
+
+            <div style="padding: 5px 20px 0px 20px;width: 100%">
+              <div style="color: #4a4a4a;font-weight:bold;font-size: 12px;margin-top: 5px;font-size: 12px">Trip timestapn20160918
+              </div>
+              <div style="font-size: 9px;color: darkgray;font-size: 10px;margin-top: 5px;">This is a mobile app recorded trail
+              </div>
+            </div>
+
+            <ion-row col-12 style="padding-left: 5px">
+
+              <ion-col col-4>
+                <button class="edit-btn" ion-button >
+                  Edit
+                </button>
+              </ion-col>
+
+              <ion-col col-4 >
+                <button class="delete-btn" ion-button >Delete</button>
+              </ion-col>
+
+            </ion-row>
+
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+
+  </div>
+</ion-content>

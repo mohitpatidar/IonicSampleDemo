@@ -1,0 +1,146 @@
+<ion-header>
+
+  <ion-navbar class="setup-Navbar">
+    <ion-buttons (click)="gotoSearch()" left style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/search.png">
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      My Places
+    </ion-title>
+    <ion-buttons right style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/bell.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color:#ECEFF4" padding-top padding-bottom padding-left>
+
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+
+  <ion-row col-12>
+    <ion-col col-5>
+      <p style="font-size: 18px;margin: 13px 0 10px 25px;color: #4a4a4a">My Places</p>
+    </ion-col>
+
+    <ion-col col-4>
+      <div class="my-places-blue-div" (click)="gotoAddPlace()">Add</div>
+    </ion-col>
+
+    <ion-col col-3>
+      <img style="width: 20px;margin-right: 15px;margin-top: 13px;float: right;" src="assets/images/newsfeed/search.png" (click)="presentSearchPrompt()">
+    </ion-col>
+  </ion-row>
+
+  <div class="row" *ngIf="searchingResultTxt !== ''" style="margin-left: 18px">
+    <p col-10 no-padding no-margin>Search for <font style="font-weight: 900">{{searchingResultTxt}}</font></p>
+    <p col-2 no-padding no-margin style="color: #ca3a11" (click)="clearResult()"> X </p>
+  </div>
+
+  <div *ngIf="searchingResultTxt == '' && myPlacesDataList.length == 0">
+    <p style="text-align: center">No places found</p>
+  </div>
+
+  <div *ngIf="searchingResultTxt !== '' && searchPlacesDataList.length == 0">
+    <p style="text-align: center">No places found</p>
+  </div>
+
+  <div style="margin-left: 18px">
+    <div *ngFor="let place of myPlacesDataList; let i = index" [attr.data-index]="i">
+    <ion-row class="my-places-all-row" *ngIf="searchingResultTxt == ''">
+      <ion-card style="margin: 0;border-radius: 5px;">
+        <ion-card-content style="padding: 0">
+          <ion-row>
+
+            <!--<img class="my-places-card-image" src="assets/images/newsfeed/img1.png">-->
+
+            <img class="my-places-card-image" src="http://maps.googleapis.com/maps/api/streetview?size=400x200&location={{place.lat}},{{place.lng}}&key=AIzaSyCANwWGF7aEZiZbtT0vV3v27gRx_ufIoHs" />
+            <!--<img class="my-places-card-image" src="http://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=600x300&key=AIzaSyCANwWGF7aEZiZbtT0vV3v27gRx_ufIoHs" />-->
+
+            <div style="padding: 5px 20px 0px 20px;width: 100%">
+              <div style="font-size: 12px;color: #4a4a4a;margin-top: 5px;font-size: 14px;font-weight: bold">{{place.title}}
+              </div>
+              <div style="font-size: 9px;color: darkgray;font-size: 10px;margin-top: 5px;">{{place.destination}}
+              </div>
+            </div>
+
+            <ion-row col-12 style="padding-left: 5px">
+
+              <ion-col col-4>
+                <button style="text-transform: none;width: 100%;height: 28px;font-size: 12px;background-color: #2e84e8;" ion-button >
+              Add to trail
+                </button>
+              </ion-col>
+
+              <ion-col col-4 >
+                <button style="text-transform: none;width: 100%;background-color: #2ec95c; height: 28px;font-size: 12px" ion-button (click)="editMyPlace(place._id, i, place.title, place.destination)" >Edit</button>
+              </ion-col>
+
+              <ion-col col-4>
+                <button class="delete-btn" ion-button (click)="presentDeleteConfirm(place._id, i, place.destination)">
+                  Delete
+                </button>
+              </ion-col>
+
+            </ion-row>
+
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+
+    </div>
+
+    <div *ngFor="let places of searchPlacesDataList; let idx = index" [attr.data-index]="idx" >
+      <ion-row class="my-places-all-row" *ngIf="searchingResultTxt !== ''">
+        <ion-card style="margin: 0;border-radius: 5px;">
+          <ion-card-content style="padding: 0">
+            <ion-row>
+              <!--<img class="my-places-card-image" src="assets/images/newsfeed/img1.png">-->
+
+              <img class="my-places-card-image" src="http://maps.googleapis.com/maps/api/streetview?size=400x200&location={{places.lat}},{{places.lng}}&key=AIzaSyCANwWGF7aEZiZbtT0vV3v27gRx_ufIoHs" />
+              <!--<img class="my-places-card-image" src="http://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=13&size=600x300&key=AIzaSyCANwWGF7aEZiZbtT0vV3v27gRx_ufIoHs" />-->
+
+              <div style="padding: 5px 20px 0px 20px;width: 100%">
+                <div style="font-size: 12px;color: #4a4a4a;margin-top: 5px;font-size: 14px;font-weight: bold">{{places.title}}
+                </div>
+                <div style="font-size: 9px;color: darkgray;font-size: 10px;margin-top: 5px;">{{places.destination}}
+                </div>
+              </div>
+
+              <ion-row col-12 style="padding-left: 5px">
+
+                <ion-col col-4>
+                  <button style="text-transform: none;width: 100%;height: 28px;font-size: 12px;background-color: #2e84e8;" ion-button >
+                    Add to trail
+                  </button>
+                </ion-col>
+
+                <ion-col col-4 >
+                  <button style="text-transform: none;width: 100%;background-color: #2ec95c; height: 28px;font-size: 12px" ion-button (click)="editMyPlace(places._id, idx, places.title, places.destination)" >Edit</button>
+                </ion-col>
+
+                <ion-col col-4>
+                  <button class="delete-btn" ion-button (click)="deletePlace(places._id, idx)">
+                    Delete
+                  </button>
+                </ion-col>
+
+              </ion-row>
+
+            </ion-row>
+          </ion-card-content>
+        </ion-card>
+      </ion-row>
+
+    </div>
+  </div>
+</ion-content>

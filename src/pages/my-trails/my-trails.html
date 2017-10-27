@@ -1,0 +1,106 @@
+<ion-header>
+
+  <ion-navbar class="setup-Navbar" hideBackButton="true">
+    <ion-buttons (click)="gotoSearch()" left style="padding: 5px">
+      <button ion-button icon-only>
+        <!--<ion-icon name="ios-search"></ion-icon>-->
+        <img style="max-width: 70%;" src="assets/images/newsfeed/search.png">
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      My Trails
+    </ion-title>
+    <ion-buttons right style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/bell.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color:#ECEFF4" padding-top padding-bottom padding-left>
+
+  <p style="font-size: 25px; margin-left: 25px;margin-bottom: 12px">My Trails</p>
+  <div style="margin-left: 18px">
+
+    <ion-row  (click)="gotoTrailDetail()" class="trails-all-row">
+      <ion-card style="margin: 0;border-radius: 5px;">
+        <ion-card-content style="padding: 0">
+          <ion-row>
+
+            <img class="trails-card-image" src="assets/images/newsfeed/img3.png">
+
+            <div style="padding: 20px;width: 100%">
+              <div style="font-size: 12px;color: #4a4a4a;font-weight:bold;margin-top: 5px;">Bike trail arround the cities
+                landmarks
+              </div>
+              <div style="font-size: 9px;color: darkgray;font-size: 10px;margin-top: 5px;">See the best attraction of
+                the city in the best way possible
+              </div>
+            </div>
+
+            <ion-row col-12 style="margin-top: 15px;">
+              <div style="background-color:#ECEFF4;width: 100%;height: 1px;margin-left: 20px;margin-right: 20px"></div>
+              <ion-col col-6 text-center>
+                <button ion-button icon-left clear small>
+                  <img style="width: 20px" src="assets/images/mytrails/right.png" align="center">
+                  <div style="text-transform: none;padding-left: 10px;color: gray;font-size: 10px">Mark Complete</div>
+                </button>
+              </ion-col>
+
+              <ion-col col-6 >
+                <button ion-button icon-left clear small>
+                  <img style="width: 20px" src="assets/images/mytrails/delete.png">
+                  <div style="text-transform: none;padding-left: 10px;color: gray;font-size: 10px">Delete</div>
+                </button>
+              </ion-col>
+
+            </ion-row>
+
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+
+    <ion-row class="trails-all-row">
+      <ion-card style="margin: 0;border-radius: 5px;">
+        <ion-card-content style="padding: 0">
+          <ion-row>
+
+              <img class="trails-card-image" src="assets/images/newsfeed/img2.png">
+
+              <div style="padding: 20px;width: 100%">
+                <div style="color: #4a4a4a;font-weight:bold;margin-top: 5px;font-size: 12px">Old Town Pubs</div>
+                <div style="font-size: 9px;color: darkgray;font-size: 10px;margin-top: 5px;">This trail is great is you
+                  want to have a great night out in Old Town. It has a total of 5 pubs, all with a great history and a
+                  very friendly stuff that will tell you all about it. If you asked nicely
+                </div>
+              </div>
+
+
+            <ion-row col-12 style="margin-top: 15px;">
+              <div style="background-color:#ECEFF4;width: 100%;height: 1px;margin-left: 20px;margin-right: 20px"></div>
+              <ion-col col-6 text-center>
+                <button ion-button icon-left clear small>
+                  <img style="width: 20px" src="assets/images/mytrails/right.png" align="center">
+                  <div style="text-transform: none;padding-left: 10px;color: gray;font-size: 10px">Mark Complete</div>
+                </button>
+              </ion-col>
+
+              <ion-col col-6 >
+                <button ion-button icon-left clear small>
+                  <img style="width: 20px" src="assets/images/mytrails/delete.png">
+                  <div style="text-transform: none;padding-left: 10px;color: gray;font-size: 10px">Delete</div>
+                </button>
+              </ion-col>
+
+            </ion-row>
+
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </div>
+</ion-content>

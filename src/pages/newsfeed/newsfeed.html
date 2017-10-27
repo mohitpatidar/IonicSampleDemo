@@ -1,0 +1,145 @@
+<ion-header>
+
+  <ion-navbar class="setup-Navbar">
+    <ion-buttons (click)="gotoSearch()" left style="padding: 5px">
+      <button ion-button icon-only>
+        <!--<ion-icon name="ios-search"></ion-icon>-->
+        <img style="max-width: 70%;" src="assets/images/newsfeed/search.png">
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Newsfeed
+    </ion-title>
+    <ion-buttons right style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/bell.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color:#ecf0f1" padding-top padding-bottom>
+
+  <ion-row class="feed-all-row">
+    <ion-col col-2>
+      <img src="assets/images/newsfeed/place.png">
+    </ion-col>
+    <ion-col col-10>
+      <ion-card style="margin: 0">
+        <ion-card-content style="padding: 0">
+          <ion-row>
+            <ion-row class="feed-main-row">
+              <ion-col col-2>
+                <img src="assets/images/newsfeed/user_icon.png">
+              </ion-col>
+              <ion-col style="padding-top: 10px" col-10>
+                <div class="feed-title">Mike White added a new place:</div>
+                <div class="feed-time">1 hour ago</div>
+              </ion-col>
+            </ion-row>
+            <img class="feed-image" src="assets/images/newsfeed/img1.png">
+
+            <div style="padding: 20px;width: 100%">
+              <div style="font-size: 12px;color: gray;margin-top: 5px;font-size: 12px">Pops Bakery</div>
+              <div style="font-size: 9px;color: darkgray;font-size: 10px;margin-top: 5px;">Rockfeller Center, 12:40 6th Ave, New York, NY
+                10020, USA
+              </div>
+            </div>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="feed-all-row">
+    <ion-col col-2>
+      <img src="assets/images/newsfeed/people.png">
+    </ion-col>
+    <ion-col col-10>
+      <ion-card style="margin: 0">
+        <ion-card-content style="padding: 0">
+          <ion-row>
+            <ion-row class="feed-main-row">
+              <ion-col col-2>
+                <img src="assets/images/newsfeed/user_icon.png">
+              </ion-col>
+              <ion-col style="padding-top: 10px" col-10>
+                <div class="feed-title">Mike White became friends with Rebeca West</div>
+                <div class="feed-time">2 hour ago</div>
+              </ion-col>
+            </ion-row>
+
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="feed-all-row">
+    <ion-col col-2>
+      <img src="assets/images/newsfeed/map.png">
+    </ion-col>
+    <ion-col col-10>
+      <ion-card style="margin: 0">
+        <ion-card-content style="padding: 0">
+          <ion-row>
+            <ion-row class="feed-main-row">
+              <ion-col col-2>
+                <img src="assets/images/newsfeed/user_icon_2.png">
+              </ion-col>
+              <ion-col style="padding-top: 10px" col-10>
+                <div class="feed-title">Jane Smith added a new trail:</div>
+                <div class="feed-time">4 hour ago</div>
+              </ion-col>
+            </ion-row>
+            <img class="feed-image" src="assets/images/newsfeed/img2.png">
+
+            <div style="padding: 20px;width: 100%">
+              <div style="font-size: 12px;color: gray;margin-top: 5px;font-size: 12px">Old Town Pubs</div>
+              <div style="font-size: 9px;color: darkgray;font-size: 10px;margin-top: 5px;">
+                This trail is great is you want to have a great night out in Old Town. It has a total of 5 pubs, all with a great history and a very friendly stuff that will tell you all about it. If you asked nicely
+              </div>
+            </div>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="feed-all-row">
+    <ion-col col-2>
+      <img src="assets/images/newsfeed/people_like.png">
+    </ion-col>
+    <ion-col col-10>
+      <ion-card style="margin: 0">
+        <ion-card-content style="padding: 0">
+          <ion-row>
+            <ion-row class="feed-main-row">
+              <ion-col col-2>
+                <img src="assets/images/newsfeed/user_icon_1.png">
+              </ion-col>
+              <ion-col style="padding-top: 10px" col-10>
+                <div class="feed-title">Rebeca West bookmarked a trail:</div>
+                <div class="feed-time">4 hour ago</div>
+              </ion-col>
+            </ion-row>
+            <img class="feed-image" src="assets/images/newsfeed/img3.png">
+
+            <div style="padding: 20px;width: 100%">
+              <div style="font-size: 12px;color: gray;margin-top: 5px;font-size: 12px">Bike trail arround the cities landmarks</div>
+              <div style="font-size: 9px;color: darkgray;font-size: 10px;margin-top: 5px;">
+                See the best attraction of the city in the best way possible
+              </div>
+            </div>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+
+
+
+</ion-content>

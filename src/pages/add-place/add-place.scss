@@ -1,0 +1,95 @@
+page-add-place {
+
+
+  .add-place-image{
+    width: 100%;
+    height: 175px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 25px;
+  }
+
+  .add-place-input{
+    padding: 0px;
+    border-style: solid;
+    border-color: #ECEFF4;
+    border-width: 1px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 2px;
+    margin-right: 2px;
+    padding-left: 15px;
+    margin-top: 10%;
+  }
+
+  .text-input-md,.text-input-ios{
+    margin: 10px 8px;
+  }
+
+
+  .add-place-btn{
+    width:90%;
+    background-color: #007aff;
+    height: 28px;
+    font-size: 10px;
+    text-transform: none;
+    float: right;
+  }
+
+  .add-place-line{
+    background-color: #ECEFF4;
+    width: 100%;
+    height: 1px;
+    margin-top: 10%;
+  }
+
+  .add-place-fb-button{
+    width:110px;
+    height: 28px;
+    font-size: 10px;
+    float: right;
+    text-transform: none;
+    padding-right: 20px;
+  }
+
+
+  .add-place-div{
+    padding-top: 20px;
+    padding-right: 5px;
+  }
+
+  .add-place-div-title{
+    font-size: 14px;
+    margin-bottom: 8px;
+    margin-left: 3px;
+    color: gray;
+  }
+
+  .add-place-item-divider{
+    padding: 0px;
+    border-style: solid;
+    border-color: #ECEFF4;
+    border-width: 1px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin-left: 2px;
+    margin-right: 2px;
+    /*padding-left: 15px;*/
+  }
+
+  .add-place-input-inside{
+    margin: 0% !important;
+    font-size: 14px;
+  }
+
+  .item-ios.item-block .item-inner {
+    padding-right: 0;
+  }
+
+  .item-md.item-block .item-inner {
+    padding-right: 0;
+  }
+
+
+
+}

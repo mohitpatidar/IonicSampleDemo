@@ -1,0 +1,74 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+.toolbar-title {
+  font-weight: 400 !important;
+  color: #4a4a4a;
+}
+
+.action-sheet-ios .action-sheet-container,.action-sheet-md .action-sheet-container{
+  margin-bottom: 50px;
+}
+
+.setup-Navbar{
+  padding: 15px 10px 15px 10px !important;
+}
+
+.setup-textarea{
+  width: 100%;
+  border-width: 1px;
+  height: 100px;
+  border-color: #ECEFF4;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+input[type='radio'] {
+  -webkit-appearance:none;
+  width:14px;
+  height:14px;
+  margin-top: 3px;
+  border:1px solid #3498db;
+  border-radius:50%;
+  outline:none;
+  /*box-shadow:0 0 5px 0px #3498db inset;*/
+}
+
+/*input[type='radio']:hover {
+  box-shadow:0 0 5px 0px #3498db inset;
+}*/
+
+input[type='radio']:before {
+  content:'';
+  display:block;
+  width:50%;
+  height:50%;
+  margin: 25% auto;
+  border-radius:100%;
+}
+input[type='radio']:checked:before {
+  background:#3498db;
+}
+
+.item-inner, ion-item {
+  border-bottom-color: transparent !important;
+  box-shadow: none !important;
+}
+
+
+
+
+

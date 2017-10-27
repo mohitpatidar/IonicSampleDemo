@@ -1,0 +1,383 @@
+<ion-header>
+
+  <ion-navbar class="setup-Navbar" hideBackButton="true">
+    <ion-buttons left style="padding: 5px">
+      <button ion-button icon-only>
+        <!--<ion-icon name="ios-search"></ion-icon>-->
+        <img style="max-width: 70%;" src="assets/images/newsfeed/search.png">
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Search
+    </ion-title>
+    <ion-buttons right style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/bell.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content style="background-color:#ecf0f1" padding-top padding-bottom padding-left>
+
+  <p style="font-size: 22px; margin-left: 12px;margin-bottom: 12px;margin-top: 12px;color: #4a4a4a;">Trail search</p>
+  <ion-card style="margin: 0">
+    <ion-card-content>
+      <div>
+        <div class="search-div">
+          <p class="search-div-title">Keywords</p>
+          <ion-input class="search-item-divider" type="text" placeholder="e.g. bike, pubs, landmarks"></ion-input>
+        </div>
+
+        <div class="search-div">
+          <p class="search-div-title">Tags</p>
+          <ion-input class="search-item-divider" type="text"></ion-input>
+        </div>
+
+        <div class="search-div">
+          <p class="search-div-title">Location</p>
+          <ion-input class="search-item-divider" type="text"></ion-input>
+        </div>
+
+        <div class="search-div">
+          <p style="font-size: 14px;">Radius</p>
+          <p right style="    text-align: right;font-size: 12px;color: gray;">up to 50 miles</p>
+          <ion-range></ion-range>
+        </div>
+
+
+        <div class="search-div">
+          <ion-row>
+            <ion-col col-6>
+              <p class="search-div-title">From</p>
+              <ion-input class="search-item-divider" type="text"></ion-input>
+            </ion-col>
+            <ion-col col-6>
+              <p class="search-div-title">To</p>
+              <ion-input class="search-item-divider" type="text"></ion-input>
+            </ion-col>
+          </ion-row>
+        </div>
+
+        <div class="search-div">
+          <p class="search-div-title">Advanced Search</p>
+          <div style="height: 2px;width: 100%;background-color:#ECEFF4"></div>
+          <ion-list>
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-5 class="search-list-column">
+                  Pace:
+                </ion-col>
+                <ion-col col-7 style="padding-right: 0;padding-left: 0px">
+                  <ion-row>
+                    <input type="radio" name="pace" value="Leisure" checked>
+                    <div class="radio-txt"> Leisure</div>
+                  </ion-row>
+                    <ion-row style="margin-top: 10px">
+                    <input  type="radio" name="pace" value="In between">
+                    <div class="radio-txt"> In between</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="pace" value="Hectic">
+                    <div class="radio-txt"> Hectic</div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 1px;width: 100%;background-color:#ECEFF4"></div>
+
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-5 class="search-list-column">
+                  Budget:
+                </ion-col>
+                <ion-col col-7>
+                  <ion-row>
+                    <input type="radio" name="Budget" checked>
+                    <div class="radio-txt"> $</div>
+                    <input style="margin-left: 10px" type="radio" name="Budget">
+                    <div class="radio-txt">$$</div>
+                    <input style="margin-left: 10px" type="radio" name="Budget">
+                    <div class="radio-txt">$$$</div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 1px;width: 100%;background-color:#ECEFF4"></div>
+
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-5 class="search-list-column">
+                  Transport:
+                </ion-col>
+                <ion-col col-7>
+                  <ion-row>
+                    <input type="radio" name="Transport" checked>
+                    <div class="radio-txt">Public transport</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Transport">
+                    <div class="radio-txt">Automobile</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Transport">
+                    <div class="radio-txt">Bike</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Transport">
+                    <div class="radio-txt">Walking</div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 1px;width: 100%;background-color:#ECEFF4"></div>
+
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-5 class="search-list-column">
+                  Time frame:
+                </ion-col>
+                <ion-col col-7>
+                  <ion-row>
+                    <input type="radio" name="TimeFrame" checked>
+                    <div class="radio-txt">A day or less</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="TimeFrame">
+                    <div class="radio-txt">Less than 3 days</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="TimeFrame">
+                    <div class="radio-txt">Less than a week</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="TimeFrame">
+                    <div class="radio-txt">All else</div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+
+            <div style="height: 1.5px;width: 100%;background-color:#ECEFF4"></div>
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-5 class="search-list-column">
+                  Type of trip:
+                </ion-col>
+                <ion-col col-7>
+                  <ion-row>
+                    <input type="radio" name="TypeOfTrip" checked>
+                    <div class="radio-txt">Once in a lifetime</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input  type="radio" name="TypeOfTrip">
+                    <div class="radio-txt">In between</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="TypeOfTrip">
+                    <div class="radio-txt">Daytrip</div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 1px;width: 100%;background-color:#ECEFF4"></div>
+
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-5 class="search-list-column">
+                  Things to do:
+                </ion-col>
+                <ion-col col-7>
+                  <ion-row>
+                    <input type="radio" name="ThingsTodo" checked>
+                    <div class="radio-txt">Historical</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="ThingsTodo">
+                    <div class="radio-txt">Food</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="ThingsTodo">
+                    <div class="radio-txt">Bucket list</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input  type="radio" name="ThingsTodo">
+                    <div class="radio-txt">Arts/culture</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="ThingsTodo">
+                    <div class="radio-txt">Nightlife</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input  type="radio" name="ThingsTodo">
+                    <div class="radio-txt">Spiritual</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="ThingsTodo">
+                    <div class="radio-txt">Romantic</div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 1px;width: 100%;background-color:#ECEFF4"></div>
+
+
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-5 class="search-list-column">
+                  Time:
+                </ion-col>
+                <ion-col col-7>
+                  <ion-row>
+                    <input type="radio" name="Time" checked>
+                    <div class="radio-txt">Day time</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Time">
+                    <div class="radio-txt">Evening</div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 1px;width: 100%;background-color:#ECEFF4"></div>
+
+
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-5 class="search-list-column">
+                  Seasonality:
+                </ion-col>
+                <ion-col col-7>
+                  <ion-row>
+                    <input type="radio" name="Seasonality" checked>
+                    <div class="radio-txt">Seasonal</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Seasonality">
+                    <div class="radio-txt">All year</div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 1px;width: 100%;background-color:#ECEFF4"></div>
+
+
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-5 class="search-list-column">
+                  Include temp:
+                </ion-col>
+                <ion-col col-7>
+                  <ion-row>
+                    <input type="radio" name="Includetemp" checked>
+                    <div class="radio-txt">Yes</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Includetemp">
+                    <div class="radio-txt">No</div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 1px;width: 100%;background-color:#ECEFF4"></div>
+
+
+            <ion-item style="padding-left: 0px;">
+              <ion-row>
+                <ion-col col-5 class="search-list-column">
+                  Persona:
+                </ion-col>
+                <ion-col col-7>
+                  <ion-row>
+                    <input type="radio" name="Persona" checked>
+                    <div class="radio-txt">Single</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Persona">
+                    <div class="radio-txt">Friends</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Persona">
+                    <div class="radio-txt">Couple</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Persona">
+                    <div class="radio-txt">Under 35</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Persona">
+                    <div class="radio-txt">35 to 55</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input  type="radio" name="Persona">
+                    <div class="radio-txt">Above 55</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Persona">
+                    <div class="radio-txt">Family with minors</div>
+                  </ion-row>
+                  <ion-row style="margin-top: 10px">
+                    <input type="radio" name="Persona">
+                    <div class="radio-txt">Family with no minors</div>
+                  </ion-row>
+                </ion-col>
+              </ion-row>
+            </ion-item>
+            <div style="height: 1px;width: 100%;background-color:#ECEFF4"></div>
+
+          </ion-list>
+
+          <div class="search-btn">Search</div>
+
+        </div>
+
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <div style="margin-left: 18px">
+    <p style="color: #4a4a4a;font-size: 22px; margin-bottom: 12px;margin-top: 15%;margin-left: 10px">2 trails found</p>
+    <ion-row class="search-all-row">
+      <ion-card style="margin: 0;border-radius: 5px;">
+        <ion-card-content style="padding: 0">
+          <ion-row>
+
+            <img class="search-card-image" src="assets/images/newsfeed/img3.png">
+
+            <div style="padding: 20px;width: 100%">
+              <div style="font-size: 12px;color: #4a4a4a;margin-top: 5px;font-size: 12px;font-weight: bold">Bike trail arround the cities
+                landmarks
+              </div>
+              <div style="font-size: 9px;color: darkgray;font-size: 10px;margin-top: 5px;">See the best attraction of
+                the city in the best way possible
+              </div>
+            </div>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+
+
+    <ion-row class="search-all-row">
+      <ion-card style="margin: 0;border-radius: 5px;">
+        <ion-card-content style="padding: 0">
+          <ion-row>
+
+            <img class="search-card-image" src="assets/images/newsfeed/img2.png">
+
+            <div style="padding: 20px;width: 100%">
+              <div style="font-size: 12px;color: #4a4a4a;margin-top: 5px;font-size: 12px;font-weight: bold">Old Town Pubs</div>
+              <div style="font-size: 9px;color: darkgray;font-size: 10px;margin-top: 5px;">This trail is great is you
+                want to have a great night out in Old Town. It has a total of 5 pubs, all with a great history and a
+                very friendly stuff that will tell you all about it. If you asked nicely
+              </div>
+            </div>
+          </ion-row>
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+  </div>
+
+
+</ion-content>

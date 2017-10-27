@@ -1,0 +1,50 @@
+page-my-places {
+
+
+  ion-app.md [padding-left], ion-app.md [padding-left] .scroll-content {
+    padding: 0;
+  }
+
+  .my-places-all-row{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .my-places-card-image{
+    width: 100%;
+    height: 50%;
+    /*padding: 5px;*/
+    position: relative;
+    overflow: hidden;
+  }
+  .my-places-blue-div{
+    /*background-color: #2e84e8;
+    border-radius: 5px;
+    height: 30px;
+    width: 55%;
+    margin: 7px 0 7px 0;
+    color: white;
+    text-align: center;
+    padding-top: 7px;*/
+
+    background-color: #2e84e8;
+    border-radius: 5px;
+    width: 55%;
+    height: 28px;
+    margin: 10px 0px 10px 0px;
+    color: white;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    font-size: 12px;
+  }
+
+  .delete-btn{
+    text-transform: none;
+    font-size: 12px;
+    width: 95%;
+    background-color: #EF4E37;
+    height: 28px;
+    width:auto;
+  }
+}

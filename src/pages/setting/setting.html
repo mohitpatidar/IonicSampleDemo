@@ -1,0 +1,56 @@
+<ion-header>
+
+  <ion-navbar class="setup-Navbar" hideBackButton="true">
+    <ion-buttons (click)="gotoSearch()" left style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/search.png">
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Settings
+    </ion-title>
+    <ion-buttons right style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/bell.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content style="background-color:#ecf0f1" padding-top padding-bottom padding-left>
+  <p style="font-size: 20px;margin: 10px 0 10px 20px;color: gray">Settings</p>
+
+  <ion-row class="setting-main-row">
+    <ion-card style="margin: 0;border-radius: 5px;">
+      <ion-card-content >
+
+        <div style="margin: 10px;color: gray">Notifications</div>
+        <div class="setting-line-div"></div>
+        <ion-item style="padding-left: 5px">
+          <ion-row *ngFor="let item of notifOptionList">
+            <ion-col col-1>
+              <input type="checkbox" [checked]="item.isChecked" (change)="item.isChecked = !item.isChecked">
+            </ion-col>
+            <ion-col col-11 class="setting-option-row"><div text-wrap>{{item.option}}</div></ion-col>
+          </ion-row>
+
+        </ion-item>
+
+        <div style="margin: 10px;color: gray;">Privacy</div>
+        <div class="setting-line-div"></div>
+        <ion-item style="padding-left: 5px">
+          <ion-row  *ngFor="let item of privacyOptionList">
+            <ion-col col-1>
+              <input type="checkbox" [checked]="item.isChecked" (change)="item.isChecked = !item.isChecked">
+            </ion-col>
+            <ion-col col-11 class="setting-option-row"><div>{{item.option}}</div></ion-col>
+          </ion-row>
+        </ion-item>
+
+        <button ion-button class="save-btn" (click)="save()" >Save</button>
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,52 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-advanced-http": {
+            "PACKAGE_NAME": "com.tv.mybreadcrumbs"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.tv.mybreadcrumbs"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.tv.mybreadcrumbs"
+        },
+        "cordova-plugin-facebook4": {
+            "APP_ID": "876883315774974",
+            "APP_NAME": "MyBreadCrumbs",
+            "PACKAGE_NAME": "com.tv.mybreadcrumbs"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.tv.mybreadcrumbs"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.tv.mybreadcrumbs"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.tv.mybreadcrumbs"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.tv.mybreadcrumbs"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.tv.mybreadcrumbs"
+        },
+        "cordova-plugin-googlemaps": {
+            "API_KEY_FOR_ANDROID": "AIzaSyBR5_jxDISr8MzAkeIXVs-qAzbxnjzzruA",
+            "PACKAGE_NAME": "com.tv.mybreadcrumbs"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.tv.mybreadcrumbs"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.tv.mybreadcrumbs"
+        }
+    }
+}

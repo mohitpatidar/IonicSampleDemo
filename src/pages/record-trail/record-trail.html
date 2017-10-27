@@ -1,0 +1,50 @@
+<ion-header>
+
+  <ion-navbar class="setup-Navbar">
+    <ion-buttons (click)="gotoSearch()" left style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/search.png">
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Record Trail
+    </ion-title>
+    <ion-buttons right style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/bell.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content style="background-color:#ecf0f1" padding-top padding-bottom padding-left>
+
+  <p style="color:gray;font-size: 25px; margin-left: 25px;margin-bottom: 12px">Record Trail</p>
+
+  <ion-row style=" padding-top: 10px;padding-bottom: 10px;">
+    <ion-card style="margin: 0;border-radius: 5px;">
+      <ion-card-content style="padding: 25px">
+        <img class="record-trail-img" src="assets/images/newsfeed/img2.png">
+
+        <ion-row style="margin-top: 15px; margin-right: 20px;margin-left: 20px">
+
+          <ion-col col-4>
+            <!--<button class="button button-clear record-btn"></button>-->
+            <div class="record-btn"></div>
+          </ion-col>
+
+          <ion-col col-4>
+            <button class="record-trail-btn" ion-button >Drop pin</button>
+          </ion-col>
+
+          <ion-col col-4>
+            <button class="record-trail-btn" ion-button >Find nearby</button>
+          </ion-col>
+        </ion-row>
+
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
+
+</ion-content>

@@ -1,0 +1,68 @@
+<ion-header>
+
+  <ion-navbar class="setup-Navbar" hideBackButton="true">
+    <ion-buttons (click)="gotoSearch()" left style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/search.png">
+      </button>
+    </ion-buttons>
+    <ion-title style="text-align: center;">
+      Friends
+    </ion-title>
+    <ion-buttons right style="padding: 5px">
+      <button ion-button icon-only>
+        <img style="max-width: 70%;" src="assets/images/newsfeed/bell.png">
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content style="background-color:#ecf0f1" padding-top padding-bottom padding-left>
+
+  <ion-row style="padding-right: 30px" col-12>
+    <ion-col col-4>
+      <p style="font-size: 20px;margin: 5px 0 10px 20px;color: gray">Friends</p>
+    </ion-col>
+
+    <ion-col col-4>
+      <button style="width: 100%;background-color: #007aff; height: 30px;font-size: 12px;text-transform: none;" ion-button >Find Friends</button>
+    </ion-col>
+
+    <ion-col col-4>
+      <button style="width: 100%;background-color: #2ec95c; height: 30px;font-size: 12px;text-transform: none;" ion-button >Invite Friends</button>
+    </ion-col>
+  </ion-row>
+
+  <ion-row class="friends-main-row">
+    <ion-card style="margin: 0;border-radius: 5px;">
+      <ion-card-content style="padding: 0">
+
+        <ion-col col-6>
+          <button style="height: 100%;padding: 20px 0px 20px 10px;" ion-button icon-left clear >
+            <img style="width: 30%" src="assets/images/friends/user1.png" align="center">
+            <div style="padding-left: 15px;color: gray;text-transform: none;">Rebeca West</div>
+          </button>
+        </ion-col>
+
+        <ion-col col-6>
+          <button style="height: 100%;padding: 20px 0px 20px 10px;" ion-button icon-left clear >
+            <img style="width: 30%" src="assets/images/friends/user2.png" align="center">
+            <div style="text-transform: none;padding-left: 15px;color: gray">Mike White</div>
+          </button>
+        </ion-col>
+
+        <ion-col col-6>
+          <button style="height: 100%;padding: 20px 0px 20px 10px;" ion-button icon-left clear >
+            <img style="width: 30%" src="assets/images/friends/user3.png" align="center">
+            <div style="text-transform: none;padding-left: 15px;color: gray">Jane Smith</div>
+          </button>
+        </ion-col>
+
+
+
+
+      </ion-card-content>
+    </ion-card>
+  </ion-row>
+</ion-content>

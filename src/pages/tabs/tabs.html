@@ -1,0 +1,8 @@
+<ion-tabs #myTabs selectedIndex="{{tabSelectedIndex}}">
+
+  <ion-tab [root]="tab1Root" tabIcon="one"></ion-tab>
+  <ion-tab [root]="tab2Root" tabIcon="two"></ion-tab>
+  <ion-tab [root]="tab3Root" tabIcon="three"></ion-tab>
+  <div class="tabs-div" (click)="openSheetTrails()"></div>
+  <ion-tab [root]="tab4Root" tabIcon="four"></ion-tab>
+</ion-tabs>
